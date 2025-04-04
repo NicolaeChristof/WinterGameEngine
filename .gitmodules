@@ -1,0 +1,3 @@
+[submodule "WinterGameEngine/vendor/spdlog"]
+	path = WinterGameEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
