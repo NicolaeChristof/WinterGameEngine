@@ -2,10 +2,6 @@
 
 #include "WinterGE/Core.h"
 
-#include <string>
-#include <sstream>
-#include <functional>
-
 namespace WinterGE
 {
 	// Events are currently blocking, meaning when an event occurs it

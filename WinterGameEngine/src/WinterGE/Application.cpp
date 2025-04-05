@@ -1,3 +1,5 @@
+#include "wgepch.h"
+
 #include "Application.h"
 
 #include "WinterGE/Events/ApplicationEvent.h"

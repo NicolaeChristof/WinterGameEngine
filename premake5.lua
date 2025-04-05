@@ -21,6 +21,9 @@ project "WinterGameEngine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "wgepch.h"
+    pchsource "WinterGameEngine/src/wgepch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
