@@ -4,6 +4,9 @@
     <Filter Include="WinterGE">
       <UniqueIdentifier>{EA6DB961-D63A-146D-FF53-0215EB7F49FB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WinterGE\Events">
+      <UniqueIdentifier>{8E0EDFDE-FA99-4CA3-03AB-CF976FB5A8A3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\WinterGE.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\WinterGE\EntryPoint.h">
       <Filter>WinterGE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Events\ApplicationEvent.h">
+      <Filter>WinterGE\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Events\Event.h">
+      <Filter>WinterGE\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Events\KeyEvent.h">
+      <Filter>WinterGE\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Events\MouseEvent.h">
+      <Filter>WinterGE\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\WinterGE\Log.h">
       <Filter>WinterGE</Filter>
