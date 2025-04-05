@@ -1,3 +1,6 @@
 [submodule "WinterGameEngine/vendor/spdlog"]
 	path = WinterGameEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "WinterGameEngine/vendor/GLFW"]
+	path = WinterGameEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

@@ -21,6 +21,9 @@
 #include <unordered_set>
 #include <vector>
 
+// My classes
+#include "WinterGE/Log.h"
+
 #ifdef WGE_PLATFORM_WINDOWS
 // Windows API
 #include <Windows.h>

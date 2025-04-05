@@ -12,6 +12,12 @@ workspace "WinterGameEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "WinterGameEngine/vendor/GLFW/include"
+
+include "WinterGameEngine/vendor/GLFW"
+
 ---------------- WGE Project Settings ----------------
 project "WinterGameEngine"
     location "WinterGameEngine"
@@ -33,7 +39,14 @@ project "WinterGameEngine"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     buildoptions
@@ -60,7 +73,8 @@ project "WinterGameEngine"
     filter "configurations:Debug"
         defines
         {
-            "WGE_DEBUG"
+            "WGE_DEBUG",
+            "WGE_ENABLE_ASSERTS"
         }
         symbols "On"
         

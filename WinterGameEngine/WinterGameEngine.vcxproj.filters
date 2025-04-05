@@ -7,6 +7,12 @@
     <Filter Include="WinterGE\Events">
       <UniqueIdentifier>{8E0EDFDE-FA99-4CA3-03AB-CF976FB5A8A3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WinterGE\Platform">
+      <UniqueIdentifier>{7EF1FA2E-EA07-F9C4-337F-84E69FD4C94C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinterGE\Platform\Windows">
+      <UniqueIdentifier>{B839A98A-24FC-DC14-6DAC-6BA1D9ADB5F2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\WinterGE.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\WinterGE\Log.h">
       <Filter>WinterGE</Filter>
     </ClInclude>
+    <ClInclude Include="src\WinterGE\Platform\Windows\WindowsWindow.h">
+      <Filter>WinterGE\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Window.h">
+      <Filter>WinterGE</Filter>
+    </ClInclude>
     <ClInclude Include="src\wgepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\WinterGE\Log.cpp">
       <Filter>WinterGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinterGE\Platform\Windows\WindowsWindow.cpp">
+      <Filter>WinterGE\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\wgepch.cpp" />
   </ItemGroup>
