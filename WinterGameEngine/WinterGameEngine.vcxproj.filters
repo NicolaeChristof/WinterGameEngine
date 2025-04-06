@@ -7,6 +7,12 @@
     <Filter Include="WinterGE\Events">
       <UniqueIdentifier>{8E0EDFDE-FA99-4CA3-03AB-CF976FB5A8A3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WinterGE\Layers">
+      <UniqueIdentifier>{69F9C1ED-D584-2FB2-DE95-B2A64AA08BB2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinterGE\Logging">
+      <UniqueIdentifier>{809864C5-6C91-8317-95C3-689C811B6323}</UniqueIdentifier>
+    </Filter>
     <Filter Include="WinterGE\Platform">
       <UniqueIdentifier>{7EF1FA2E-EA07-F9C4-337F-84E69FD4C94C}</UniqueIdentifier>
     </Filter>
@@ -37,8 +43,14 @@
     <ClInclude Include="src\WinterGE\Events\MouseEvent.h">
       <Filter>WinterGE\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\WinterGE\Log.h">
-      <Filter>WinterGE</Filter>
+    <ClInclude Include="src\WinterGE\Layers\Layer.h">
+      <Filter>WinterGE\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Layers\LayerStack.h">
+      <Filter>WinterGE\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinterGE\Logging\Log.h">
+      <Filter>WinterGE\Logging</Filter>
     </ClInclude>
     <ClInclude Include="src\WinterGE\Platform\Windows\WindowsWindow.h">
       <Filter>WinterGE\Platform\Windows</Filter>
@@ -52,8 +64,14 @@
     <ClCompile Include="src\WinterGE\Application.cpp">
       <Filter>WinterGE</Filter>
     </ClCompile>
-    <ClCompile Include="src\WinterGE\Log.cpp">
-      <Filter>WinterGE</Filter>
+    <ClCompile Include="src\WinterGE\Layers\Layer.cpp">
+      <Filter>WinterGE\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinterGE\Layers\LayerStack.cpp">
+      <Filter>WinterGE\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinterGE\Logging\Log.cpp">
+      <Filter>WinterGE\Logging</Filter>
     </ClCompile>
     <ClCompile Include="src\WinterGE\Platform\Windows\WindowsWindow.cpp">
       <Filter>WinterGE\Platform\Windows</Filter>

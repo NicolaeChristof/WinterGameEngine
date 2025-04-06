@@ -84,7 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -111,7 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -139,7 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -163,14 +163,18 @@
     <ClInclude Include="src\WinterGE\Events\Event.h" />
     <ClInclude Include="src\WinterGE\Events\KeyEvent.h" />
     <ClInclude Include="src\WinterGE\Events\MouseEvent.h" />
-    <ClInclude Include="src\WinterGE\Log.h" />
+    <ClInclude Include="src\WinterGE\Layers\Layer.h" />
+    <ClInclude Include="src\WinterGE\Layers\LayerStack.h" />
+    <ClInclude Include="src\WinterGE\Logging\Log.h" />
     <ClInclude Include="src\WinterGE\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\WinterGE\Window.h" />
     <ClInclude Include="src\wgepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WinterGE\Application.cpp" />
-    <ClCompile Include="src\WinterGE\Log.cpp" />
+    <ClCompile Include="src\WinterGE\Layers\Layer.cpp" />
+    <ClCompile Include="src\WinterGE\Layers\LayerStack.cpp" />
+    <ClCompile Include="src\WinterGE\Logging\Log.cpp" />
     <ClCompile Include="src\WinterGE\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\wgepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

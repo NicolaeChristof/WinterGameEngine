@@ -23,7 +23,7 @@
 
 // My classes
 #include "WinterGE/Core.h"
-#include "WinterGE/Log.h"
+#include "WinterGE/Logging/Log.h"
 
 #ifdef WGE_PLATFORM_WINDOWS
 // Windows API

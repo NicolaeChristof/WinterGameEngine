@@ -4,6 +4,7 @@
 #include "Window.h"
 
 #include "WinterGE/Events/ApplicationEvent.h"
+#include "WinterGE/Layers/LayerStack.h"
 
 namespace WinterGE
 {
@@ -14,14 +15,19 @@ namespace WinterGE
 		virtual ~Application();
 
 		void Run();
-
 		void OnEvent(Event& Event);
+
+		void PushLayer(Layer* Layer);
+		void PopLayer(Layer* Layer);
+		void PushOverlay(Layer* Overlay);
+		void PopOverlay(Layer* Overlay);
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& Event);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_bRunning = true;
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in CLIENT

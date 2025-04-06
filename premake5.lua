@@ -76,6 +76,12 @@ project "WinterGameEngine"
             "WGE_DEBUG",
             "WGE_ENABLE_ASSERTS"
         }
+
+        buildoptions
+        {
+            "/MDd"
+        }
+
         symbols "On"
         
     filter "configurations:Release"
@@ -83,6 +89,12 @@ project "WinterGameEngine"
         {
             "WGE_RELEASE"
         }
+
+        buildoptions
+        {
+            "/MD"
+        }
+
         optimize "On"
 
     filter "configurations:Dist"
@@ -90,6 +102,12 @@ project "WinterGameEngine"
         {
             "WGE_DIST"
         }
+
+        buildoptions
+        {
+            "/MD"
+        }
+
         optimize "On"
 
 ---------------- Sandbox Project Settings ----------------
@@ -138,6 +156,12 @@ project "Sandbox"
         {
             "WGE_DEBUG"
         }
+
+        buildoptions
+        {
+            "/MDd"
+        }
+
         symbols "On"
         
     filter "configurations:Release"
@@ -145,6 +169,12 @@ project "Sandbox"
         {
             "WGE_RELEASE"
         }
+
+        buildoptions
+        {
+            "/MD"
+        }
+
         optimize "On"
 
     filter "configurations:Dist"
@@ -152,4 +182,10 @@ project "Sandbox"
         {
             "WGE_DIST"
         }
+
+        buildoptions
+        {
+            "/MD"
+        }
+        
         optimize "On"

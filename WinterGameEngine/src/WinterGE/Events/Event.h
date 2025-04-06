@@ -46,8 +46,14 @@ namespace WinterGE
 		{
 			return GetCategoryFlags() & Category;
 		}
+
+		inline bool IsHandled()
+		{
+			return m_bHandled;
+		}
+
 	protected:
-		bool m_Handled = false;
+		bool m_bHandled = false;
 	};
 
 // These macros allow us to easily override the pure virtual functions from the base Event class
@@ -74,9 +80,9 @@ virtual int GetCategoryFlags() const override { return Category; }
 			if (T::GetStaticType() == m_Event.GetEventType())
 			{
 				// This line of code is using type punning which is basically a fancy way to cast m_Event to type T
-				m_Event.m_Handled = Func(*(T*)&m_Event);
+				m_Event.m_bHandled = Func(*(T*)&m_Event);
 				// For actual production code I would use a static cast which is more readable
-				//m_Event.m_Handled = Func(static_cast<T>(m_Event));
+				//m_Event.m_bHandled = Func(static_cast<T>(m_Event));
 				return true;
 			}
 			return false;
@@ -90,20 +96,4 @@ virtual int GetCategoryFlags() const override { return Category; }
 	{
 		return Stream << Event.ToString();
 	}
-
-	// Potential fix from comments section try later TODO
-	//template<typename T>
-	//struct fmt::formatter<T, std::enable_if_t<std::is_base_of<Event, T>::value, char>> : fmt::formatter<std::string>
-	//{
-	//	auto format(const T& Event, fmt::format_context& ctx)
-	//	{
-	//		return fmt::format_to(ctx.out(), "{}", Event.ToString());
-	//	}
-	//};
-
-	//template <typename... T>
-	//std::string StringFromArgs(fmt::format_string<T...> fmt, T&&... args)
-	//{
-	//	return fmt::format(fmt, std::forward<T>(args)...);
-	//}
 }
