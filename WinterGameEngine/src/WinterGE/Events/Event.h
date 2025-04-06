@@ -1,6 +1,6 @@
 #pragma once
 
-#include "WinterGE/Core.h"
+#include "wgepch.h"
 
 namespace WinterGE
 {
@@ -61,13 +61,15 @@ virtual int GetCategoryFlags() const override { return Category; }
 
 	class EventDispatcher
 	{
+		template<typename T>
+		using EventFn = std::function<bool(T&)>;
 	public:
 		EventDispatcher(Event& Event) : m_Event(Event)
 		{
 		}
 
 		template<typename T>
-		bool Dispatch(std::function<bool(T&)> Func)
+		bool Dispatch(EventFn<T> Func)
 		{
 			if (T::GetStaticType() == m_Event.GetEventType())
 			{
@@ -88,4 +90,20 @@ virtual int GetCategoryFlags() const override { return Category; }
 	{
 		return Stream << Event.ToString();
 	}
+
+	// Potential fix from comments section try later TODO
+	//template<typename T>
+	//struct fmt::formatter<T, std::enable_if_t<std::is_base_of<Event, T>::value, char>> : fmt::formatter<std::string>
+	//{
+	//	auto format(const T& Event, fmt::format_context& ctx)
+	//	{
+	//		return fmt::format_to(ctx.out(), "{}", Event.ToString());
+	//	}
+	//};
+
+	//template <typename... T>
+	//std::string StringFromArgs(fmt::format_string<T...> fmt, T&&... args)
+	//{
+	//	return fmt::format(fmt, std::forward<T>(args)...);
+	//}
 }

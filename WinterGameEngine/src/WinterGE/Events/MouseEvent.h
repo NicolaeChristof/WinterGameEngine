@@ -7,16 +7,16 @@ namespace WinterGE
 	class WGE_API MouseMovedEvent : public Event
 	{
 	public:
-		MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y)
+		MouseMovedEvent(double x, double y) : m_MouseX(x), m_MouseY(y)
 		{
 		}
 
-		inline float GetX() const
+		inline double GetX() const
 		{
 			return m_MouseX;
 		}
 
-		inline float GetY() const
+		inline double GetY() const
 		{
 			return m_MouseY;
 		}
@@ -31,23 +31,23 @@ namespace WinterGE
 		EVENT_CLASS_TYPE(MouseMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_MouseX;
-		float m_MouseY;
+		double m_MouseX;
+		double m_MouseY;
 	};
 
 	class WGE_API MouseScrolledEvent : public Event
 	{
 	public:
-		MouseScrolledEvent(float XOffset, float YOffset) : m_XOffset(XOffset), m_YOffset(YOffset)
+		MouseScrolledEvent(double XOffset, double YOffset) : m_XOffset(XOffset), m_YOffset(YOffset)
 		{
 		}
 
-		inline float GetXOffset() const
+		inline double GetXOffset() const
 		{
 			return m_XOffset;
 		}
 
-		inline float GetYOffset() const
+		inline double GetYOffset() const
 		{
 			return m_YOffset;
 		}
@@ -62,8 +62,8 @@ namespace WinterGE
 		EVENT_CLASS_TYPE(MouseScrolled)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_XOffset;
-		float m_YOffset;
+		double m_XOffset;
+		double m_YOffset;
 	};
 
 	class WGE_API MouseButtonEvent : public Event

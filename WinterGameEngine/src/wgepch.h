@@ -1,5 +1,5 @@
 // This is a personal academic project. Dear PVS-Studio, please check it.
-// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com/
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 
 #pragma once
 
@@ -22,6 +22,7 @@
 #include <vector>
 
 // My classes
+#include "WinterGE/Core.h"
 #include "WinterGE/Log.h"
 
 #ifdef WGE_PLATFORM_WINDOWS

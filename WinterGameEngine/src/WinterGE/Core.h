@@ -19,5 +19,7 @@
 	#define WGE_CORE_ASSERT(x, ...)
 #endif //  WGE_ENABLE_ASSERTS
 
+// std::bind created a callable function object called a functor
+#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 
 #define BIT(x) (1 << x)

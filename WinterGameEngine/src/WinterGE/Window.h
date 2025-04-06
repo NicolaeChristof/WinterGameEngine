@@ -2,7 +2,6 @@
 
 #include "wgepch.h"
 
-#include "WinterGE/Core.h"
 #include "WinterGE/Events/Event.h"
 
 namespace WinterGE
