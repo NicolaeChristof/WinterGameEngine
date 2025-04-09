@@ -22,7 +22,19 @@ namespace WinterGE
 		void PushOverlay(Layer* Overlay);
 		void PopOverlay(Layer* Overlay);
 
+		static inline Application& Get()
+		{
+			return *s_Instance;
+		}
+
+		inline Window& GetWindow()
+		{
+			return *m_Window;
+		}
+
 	private:
+		static Application* s_Instance;
+
 		bool OnWindowClose(WindowCloseEvent& Event);
 
 		std::unique_ptr<Window> m_Window;

@@ -11,21 +11,10 @@ namespace WinterGE
 		Layer(const std::string& Name = "Layer");
 		virtual ~Layer();
 
-		virtual void OnAttach()
-		{
-		}
-
-		virtual void OnDetach()
-		{
-		}
-
-		virtual void OnUpdate()
-		{
-		}
-
-		virtual void OnEvent(Event& Event)
-		{
-		}
+		virtual void OnAttach() = 0;
+		virtual void OnDetach() = 0;
+		virtual void OnUpdate() = 0;
+		virtual void OnEvent(Event& Event) = 0;
 
 		inline const std::string& GetName() const
 		{
@@ -44,6 +33,6 @@ namespace WinterGE
 
 	protected:
 		std::string m_DebugName;
-		bool m_bEnabled;
+		bool m_bEnabled = true;
 	};
 }

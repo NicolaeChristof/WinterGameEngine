@@ -3,7 +3,10 @@
 // For use by Winter Game Engine applications
 
 #include "WinterGE/Application.h"
+
 #include "WinterGE/Layers/Layer.h"
+#include "WinterGE/ImGui/ImGuiLayer.h"
+
 #include "WinterGE/Logging/Log.h"
 
 // -------- Entry Point ---------

@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="WinterGE">
       <UniqueIdentifier>{EA6DB961-D63A-146D-FF53-0215EB7F49FB}</UniqueIdentifier>
     </Filter>
     <Filter Include="WinterGE\Events">
       <UniqueIdentifier>{8E0EDFDE-FA99-4CA3-03AB-CF976FB5A8A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinterGE\ImGui">
+      <UniqueIdentifier>{942A1B64-80F8-0E6A-698C-7F9055F9EACE}</UniqueIdentifier>
     </Filter>
     <Filter Include="WinterGE\Layers">
       <UniqueIdentifier>{69F9C1ED-D584-2FB2-DE95-B2A64AA08BB2}</UniqueIdentifier>
@@ -13,14 +25,14 @@
     <Filter Include="WinterGE\Logging">
       <UniqueIdentifier>{809864C5-6C91-8317-95C3-689C811B6323}</UniqueIdentifier>
     </Filter>
-    <Filter Include="WinterGE\Platform">
-      <UniqueIdentifier>{7EF1FA2E-EA07-F9C4-337F-84E69FD4C94C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WinterGE\Platform\Windows">
-      <UniqueIdentifier>{B839A98A-24FC-DC14-6DAC-6BA1D9ADB5F2}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\WinterGE.h" />
     <ClInclude Include="src\WinterGE\Application.h">
       <Filter>WinterGE</Filter>
@@ -43,6 +55,9 @@
     <ClInclude Include="src\WinterGE\Events\MouseEvent.h">
       <Filter>WinterGE\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\WinterGE\ImGui\ImGuiLayer.h">
+      <Filter>WinterGE\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\WinterGE\Layers\Layer.h">
       <Filter>WinterGE\Layers</Filter>
     </ClInclude>
@@ -52,17 +67,23 @@
     <ClInclude Include="src\WinterGE\Logging\Log.h">
       <Filter>WinterGE\Logging</Filter>
     </ClInclude>
-    <ClInclude Include="src\WinterGE\Platform\Windows\WindowsWindow.h">
-      <Filter>WinterGE\Platform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\WinterGE\Window.h">
       <Filter>WinterGE</Filter>
     </ClInclude>
     <ClInclude Include="src\wgepch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\WinterGE\Application.cpp">
       <Filter>WinterGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinterGE\ImGui\ImGuiLayer.cpp">
+      <Filter>WinterGE\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\WinterGE\Layers\Layer.cpp">
       <Filter>WinterGE\Layers</Filter>
@@ -72,9 +93,6 @@
     </ClCompile>
     <ClCompile Include="src\WinterGE\Logging\Log.cpp">
       <Filter>WinterGE\Logging</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WinterGE\Platform\Windows\WindowsWindow.cpp">
-      <Filter>WinterGE\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\wgepch.cpp" />
   </ItemGroup>

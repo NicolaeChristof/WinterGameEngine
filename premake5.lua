@@ -14,11 +14,15 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
+IncludeDir["spdlog"] = "WinterGameEngine/vendor/spdlog/include"
 IncludeDir["GLFW"] = "WinterGameEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "WinterGameEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "WinterGameEngine/vendor/imgui"
 
+-- Include other premake5.lua files
 include "WinterGameEngine/vendor/GLFW"
 include "WinterGameEngine/vendor/Glad"
+include "WinterGameEngine/vendor/imgui"
 
 ---------------- WGE Project Settings ----------------
 project "WinterGameEngine"
@@ -41,15 +45,17 @@ project "WinterGameEngine"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.spdlog}",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
         "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 

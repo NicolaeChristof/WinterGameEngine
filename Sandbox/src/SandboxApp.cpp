@@ -7,9 +7,16 @@ public:
 	{
 	}
 
+	void OnAttach() override
+	{
+	}
+
+	void OnDetach() override
+	{
+	}
+
 	void OnUpdate() override
 	{
-		LOG_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(WinterGE::Event& Event) override
@@ -24,6 +31,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new WinterGE::ImGuiLayer());
 	}
 
 	~Sandbox()

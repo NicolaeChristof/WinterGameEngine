@@ -4,3 +4,6 @@
 [submodule "WinterGameEngine/vendor/GLFW"]
 	path = WinterGameEngine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "WinterGameEngine/vendor/imgui"]
+	path = WinterGameEngine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
