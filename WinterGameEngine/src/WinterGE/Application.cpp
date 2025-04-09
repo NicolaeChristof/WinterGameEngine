@@ -2,7 +2,7 @@
 #include "Application.h"
 
 // remove this when we remove the color change from the run loop
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace WinterGE
 {

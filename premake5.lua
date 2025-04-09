@@ -15,8 +15,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "WinterGameEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "WinterGameEngine/vendor/Glad/include"
 
 include "WinterGameEngine/vendor/GLFW"
+include "WinterGameEngine/vendor/Glad"
 
 ---------------- WGE Project Settings ----------------
 project "WinterGameEngine"
@@ -40,12 +42,14 @@ project "WinterGameEngine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -62,7 +66,8 @@ project "WinterGameEngine"
         defines
         {
             "WGE_PLATFORM_WINDOWS",
-            "WGE_BUILD_DLL"
+            "WGE_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
