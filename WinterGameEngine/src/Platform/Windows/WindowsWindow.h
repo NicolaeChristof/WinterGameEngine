@@ -35,7 +35,7 @@ namespace WinterGE
 
 	private:
 		virtual void Init(const WindowProperties& Properties);
-		virtual void SetGLFWCallback();
+		virtual void SetGLFWCallbacks();
 		virtual void Shutdown();
 
 	private:

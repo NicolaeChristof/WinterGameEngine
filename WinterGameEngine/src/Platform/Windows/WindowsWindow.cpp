@@ -57,10 +57,10 @@ namespace WinterGE
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
-		SetGLFWCallback();
+		SetGLFWCallbacks();
 	}
 
-	void WindowsWindow::SetGLFWCallback()
+	void WindowsWindow::SetGLFWCallbacks()
 	{
 		// Application Callbacks
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* Window, int Width, int Height)
@@ -84,33 +84,42 @@ namespace WinterGE
 		);
 
 		// Keyboard Callbacks
-		glfwSetKeyCallback(m_Window, [](GLFWwindow* Window, int Key, int Scancode, int Action, int Mods)
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* Window, int KeyCode, int Scancode, int Action, int Mods)
 			{
 				WindowData& Data = *(WindowData*)glfwGetWindowUserPointer(Window);
 
 				switch (Action)
 				{
-					case GLFW_PRESS:
-					{
-						KeyPressedEvent Event(Key, 0);
-						Data.EventCallback(Event);
-						break;
-					}
-					case GLFW_RELEASE:
-					{
-						KeyReleasedEvent Event(Key);
-						Data.EventCallback(Event);
-						break;
-					}
-					case GLFW_REPEAT:
-					{
-						KeyPressedEvent Event(Key, 1);
-						Data.EventCallback(Event);
-						break;
-					}
-					default:
-						break;
+				case GLFW_PRESS:
+				{
+					KeyPressedEvent Event(KeyCode, 0);
+					Data.EventCallback(Event);
+					break;
 				}
+				case GLFW_RELEASE:
+				{
+					KeyReleasedEvent Event(KeyCode);
+					Data.EventCallback(Event);
+					break;
+				}
+				case GLFW_REPEAT:
+				{
+					KeyPressedEvent Event(KeyCode, 1);
+					Data.EventCallback(Event);
+					break;
+				}
+				default:
+					break;
+				}
+			}
+		);
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* Window, unsigned int KeyCode)
+			{
+				WindowData& Data = *(WindowData*)glfwGetWindowUserPointer(Window);
+
+				KeyTypedEvent Event(KeyCode);
+				Data.EventCallback(Event);
 			}
 		);
 
